@@ -50,3 +50,19 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Ignore IDE configuration files
+.idea/
+
+# Ignore CMake build folders
+cmake-build-debug/
+build/
+
+# Remove all tracked files from the Git index
+git rm -r --cached .
+
+# Re-add all files (now respecting .gitignore)
+git add .
+
+# Commit the changes
+git commit -m "Fixed .gitignore to ignore IDE and build files"
